@@ -1,11 +1,11 @@
 import "./App.css";
-import NavbarWithDropdown from "./components/navbar";
+import AppRouter from "./pages/appRouter";
 
 function App() {
   return (
-    <div>
-      <NavbarWithDropdown />
-    </div>
+    <>
+      <AppRouter />
+    </>
   );
 }
 

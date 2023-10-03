@@ -1,6 +1,6 @@
 "use client";
 
-import { Dropdown, Navbar, Avatar, Item } from "flowbite-react";
+import { Dropdown, Navbar, Avatar } from "flowbite-react";
 
 export default function NavbarWithDropdown() {
   return (
@@ -33,11 +33,11 @@ export default function NavbarWithDropdown() {
               name@flowbite.com
             </span>
           </Dropdown.Header>
-          <Item>Dashboard</Item>
-          <Item>Settings</Item>
-          <Item>Earnings</Item>
+          <Dropdown.Item>Dashboard</Dropdown.Item>
+          <Dropdown.Item>Settings</Dropdown.Item>
+          <Dropdown.Item>Earnings</Dropdown.Item>
           <Dropdown.Divider />
-          <Item>Sign out</Item>
+          <Dropdown.Item>Sign out</Dropdown.Item>
         </Dropdown>
         <Navbar.Toggle />
       </div>
