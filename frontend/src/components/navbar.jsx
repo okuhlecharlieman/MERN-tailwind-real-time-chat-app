@@ -1,55 +1,41 @@
-"use client";
+import React from "react";
 
-import { Dropdown, Navbar, Avatar } from "flowbite-react";
-
-export default function NavbarWithDropdown() {
+function navbar() {
   return (
-    <Navbar fluid rounded>
-      <Navbar.Brand href="https://flowbite-react.com">
-        <img
-          alt="Flowbite React Logo"
-          className="mr-3 h-6 sm:h-9"
-          src="/favicon.svg"
-        />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-          Flowbite React
-        </span>
-      </Navbar.Brand>
-      <div className="flex md:order-2">
-        <Dropdown
-          arrowIcon={false}
-          inline
-          label={
-            <Avatar
-              alt="User settings"
-              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-              rounded
-            />
-          }
-        >
-          <Dropdown.Header>
-            <span className="block text-sm">Bonnie Green</span>
-            <span className="block truncate text-sm font-medium">
-              name@flowbite.com
-            </span>
-          </Dropdown.Header>
-          <Dropdown.Item>Dashboard</Dropdown.Item>
-          <Dropdown.Item>Settings</Dropdown.Item>
-          <Dropdown.Item>Earnings</Dropdown.Item>
-          <Dropdown.Divider />
-          <Dropdown.Item>Sign out</Dropdown.Item>
-        </Dropdown>
-        <Navbar.Toggle />
+    <div>
+      <div className="navbar rounded-lg">
+        <div className="navbar-start">
+          <a className="navbar-item">Ripple UI</a>
+        </div>
+        <div className="navbar-end">
+          <div className="avatar avatar-ring avatar-md">
+            <div className="dropdown-container">
+              <div className="dropdown">
+                <label
+                  className="btn btn-ghost flex cursor-pointer px-0"
+                  tabIndex="0"
+                >
+                  <img
+                    src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
+                    alt="avatar"
+                  />
+                </label>
+                <div className="dropdown-menu dropdown-menu-bottom-left">
+                  <a className="dropdown-item text-sm">Profile</a>
+                  <a tabIndex="-1" className="dropdown-item text-sm">
+                    Account settings
+                  </a>
+                  <a tabIndex="-1" className="dropdown-item text-sm">
+                    Subscriptions
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <Navbar.Collapse>
-        <Navbar.Link active href="#">
-          <p>Home</p>
-        </Navbar.Link>
-        <Navbar.Link href="#">About</Navbar.Link>
-        <Navbar.Link href="#">Services</Navbar.Link>
-        <Navbar.Link href="#">Pricing</Navbar.Link>
-        <Navbar.Link href="#">Contact</Navbar.Link>
-      </Navbar.Collapse>
-    </Navbar>
+    </div>
   );
 }
+
+export default navbar;

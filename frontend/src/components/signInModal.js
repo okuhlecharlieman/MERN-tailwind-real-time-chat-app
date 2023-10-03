@@ -1,20 +1,29 @@
-'use client';
+"use client";
 
-import { Button, Checkbox, Label, Modal, TextInput } from 'flowbite-react';
+import { Button, Checkbox, Label, Modal, TextInput } from "flowbite-react";
 
 export default function FormElements() {
-  const [openModal, setOpenModal] = useState<string | undefined>();
+  //   const [openModal, setOpenModal] = useState<string | undefined>();
   const [email, setEmail] = useState("");
   const props = { openModal, setOpenModal, email, setEmail };
 
   return (
     <>
-      <Button onClick={() => props.setOpenModal('form-elements')}>Toggle modal</Button>
-      <Modal show={props.openModal === 'form-elements'} size="md" popup onClose={() => props.setOpenModal(undefined)}>
+      <Button onClick={() => props.setOpenModal("form-elements")}>
+        Toggle modal
+      </Button>
+      <Modal
+        show={props.openModal === "form-elements"}
+        size="md"
+        popup
+        onClose={() => props.setOpenModal(undefined)}
+      >
         <Modal.Header />
         <Modal.Body>
           <div className="space-y-6">
-            <h3 className="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
+            <h3 className="text-xl font-medium text-gray-900 dark:text-white">
+              Sign in to our platform
+            </h3>
             <div>
               <div className="mb-2 block">
                 <Label htmlFor="email" value="Your email" />
@@ -32,7 +41,10 @@ export default function FormElements() {
                 <Checkbox id="remember" />
                 <Label htmlFor="remember">Remember me</Label>
               </div>
-              <a href="/modal" className="text-sm text-cyan-700 hover:underline dark:text-cyan-500">
+              <a
+                href="/modal"
+                className="text-sm text-cyan-700 hover:underline dark:text-cyan-500"
+              >
                 Lost Password?
               </a>
             </div>
@@ -41,7 +53,10 @@ export default function FormElements() {
             </div>
             <div className="flex justify-between text-sm font-medium text-gray-500 dark:text-gray-300">
               Not registered?&nbsp;
-              <a href="/modal" className="text-cyan-700 hover:underline dark:text-cyan-500">
+              <a
+                href="/modal"
+                className="text-cyan-700 hover:underline dark:text-cyan-500"
+              >
                 Create account
               </a>
             </div>
@@ -49,7 +64,5 @@ export default function FormElements() {
         </Modal.Body>
       </Modal>
     </>
-  )
+  );
 }
-
-
