@@ -5,7 +5,7 @@ function navbar() {
     <div>
       <div className="navbar rounded-lg">
         <div className="navbar-start">
-          <a className="navbar-item">Ripple UI</a>
+          <a className="navbar-item">Huzet?</a>
         </div>
         <div className="navbar-end">
           <div className="avatar avatar-ring avatar-md">
@@ -25,8 +25,9 @@ function navbar() {
                   <a tabIndex="-1" className="dropdown-item text-sm">
                     Account settings
                   </a>
+                  <div className="divider"></div>
                   <a tabIndex="-1" className="dropdown-item text-sm">
-                    Subscriptions
+                    Logout
                   </a>
                 </div>
               </div>

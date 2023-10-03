@@ -1,68 +1,165 @@
-"use client";
+import React from "react";
 
-import { Button, Checkbox, Label, Modal, TextInput } from "flowbite-react";
-
-export default function FormElements() {
-  //   const [openModal, setOpenModal] = useState<string | undefined>();
-  const [email, setEmail] = useState("");
-  const props = { openModal, setOpenModal, email, setEmail };
-
+function signInModal() {
   return (
-    <>
-      <Button onClick={() => props.setOpenModal("form-elements")}>
-        Toggle modal
-      </Button>
-      <Modal
-        show={props.openModal === "form-elements"}
-        size="md"
-        popup
-        onClose={() => props.setOpenModal(undefined)}
-      >
-        <Modal.Header />
-        <Modal.Body>
-          <div className="space-y-6">
-            <h3 className="text-xl font-medium text-gray-900 dark:text-white">
-              Sign in to our platform
-            </h3>
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="email" value="Your email" />
+    <div>
+      <article>
+        <label class="btn btn-primary" for="modal-1">
+          Sign in
+        </label>
+
+        <input class="modal-state" id="modal-1" type="checkbox" />
+        <div class="modal">
+          <label class="modal-overlay" for="modal-1"></label>
+          <div class="modal-content flex w-full flex-col gap-5 p-7">
+            <label
+              for="modal-1"
+              class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+            >
+              ✕
+            </label>
+            <div class="flex flex-col gap-2">
+              <h2 class="text-center text-2xl font-semibold">Sign In</h2>
+              <p class="mx-auto max-w-xs text-sm text-content2">
+                Sign in to your account to continue.
+              </p>
+            </div>
+
+            <section>
+              <div class="form-group">
+                <div class="form-field">
+                  <label class="form-label">Email address</label>
+                  <input
+                    placeholder="Type here"
+                    type="email"
+                    class="input max-w-full"
+                  />
+                  <label class="form-label">
+                    <span class="form-label-alt">
+                      Please enter a valid email.
+                    </span>
+                  </label>
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label">
+                    <span>Password</span>
+                  </label>
+                  <div class="form-control">
+                    <input
+                      placeholder="Type here"
+                      type="password"
+                      class="input max-w-full"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <div class="form-control justify-between">
+                    <div>
+                      <input type="checkbox" class="checkbox" />
+                      <a href="#">Remember me</a>
+                    </div>
+                    <label class="form-label">
+                      <a class="link link-underline-hover link-primary text-sm">
+                        Forgot your password?
+                      </a>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-field pt-5">
+                  <div class="form-control justify-between">
+                    <button type="button" class="btn btn-primary w-full">
+                      Sign in
+                    </button>
+                  </div>
+                </div>
               </div>
-              <TextInput id="email" placeholder="name@company.com" required />
-            </div>
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="password" value="Your password" />
+              <div class="divider text-sm">Login with social accounts</div>
+
+              <div class="flex justify-center space-x-4">
+                <button
+                  type="button"
+                  aria-label="Log in with Google"
+                  class="rounded-sm p-3"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    version="1.1"
+                    viewBox="0 0 48 48"
+                    enable-background="new 0 0 48 48"
+                    class="h-5 w-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill="#FFC107"
+                      d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12
+                  c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24
+                  c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"
+                    ></path>
+                    <path
+                      fill="#FF3D00"
+                      d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657
+                  C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"
+                    ></path>
+                    <path
+                      fill="#4CAF50"
+                      d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36
+                  c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"
+                    ></path>
+                    <path
+                      fill="#1976D2"
+                      d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571
+                  c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
+                    ></path>
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  aria-label="Log in with Twitter"
+                  class="rounded-sm p-3"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 32 32"
+                    class="h-5 w-5 fill-primary"
+                  >
+                    <path d="M31.937 6.093c-1.177 0.516-2.437 0.871-3.765 1.032 1.355-0.813 2.391-2.099 2.885-3.631-1.271 0.74-2.677 1.276-4.172 1.579-1.192-1.276-2.896-2.079-4.787-2.079-3.625 0-6.563 2.937-6.563 6.557 0 0.521 0.063 1.021 0.172 1.495-5.453-0.255-10.287-2.875-13.52-6.833-0.568 0.964-0.891 2.084-0.891 3.303 0 2.281 1.161 4.281 2.916 5.457-1.073-0.031-2.083-0.328-2.968-0.817v0.079c0 3.181 2.26 5.833 5.26 6.437-0.547 0.145-1.131 0.229-1.724 0.229-0.421 0-0.823-0.041-1.224-0.115 0.844 2.604 3.26 4.5 6.14 4.557-2.239 1.755-5.077 2.801-8.135 2.801-0.521 0-1.041-0.025-1.563-0.088 2.917 1.86 6.36 2.948 10.079 2.948 12.067 0 18.661-9.995 18.661-18.651 0-0.276 0-0.557-0.021-0.839 1.287-0.917 2.401-2.079 3.281-3.396z"></path>
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  aria-label="Log in with GitHub"
+                  class="rounded-sm p-3"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 32 32"
+                    class="h-5 w-5 fill-current"
+                  >
+                    <path d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"></path>
+                  </svg>
+                </button>
               </div>
-              <TextInput id="password" type="password" required />
-            </div>
-            <div className="flex justify-between">
-              <div className="flex items-center gap-2">
-                <Checkbox id="remember" />
-                <Label htmlFor="remember">Remember me</Label>
+              <div class="items-center justify-center text-xs dark:text-gray-5 sm:px-6 flex gap-2">
+                <span>Don't have an account?</span>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="link link-primary text-xs"
+                >
+                  Sign up
+                </a>
               </div>
-              <a
-                href="/modal"
-                className="text-sm text-cyan-700 hover:underline dark:text-cyan-500"
-              >
-                Lost Password?
-              </a>
-            </div>
-            <div className="w-full">
-              <Button>Log in to your account</Button>
-            </div>
-            <div className="flex justify-between text-sm font-medium text-gray-500 dark:text-gray-300">
-              Not registered?&nbsp;
-              <a
-                href="/modal"
-                className="text-cyan-700 hover:underline dark:text-cyan-500"
-              >
-                Create account
-              </a>
-            </div>
+            </section>
           </div>
-        </Modal.Body>
-      </Modal>
-    </>
+        </div>
+      </article>
+    </div>
   );
 }
+
+export default signInModal;
