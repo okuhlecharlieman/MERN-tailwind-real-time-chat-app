@@ -1,4 +1,6 @@
 import React from "react";
+import MsgDrawer from "./MsgDrawer";
+import NotificationDrawer from "./notificationDrawer";
 
 function navbar() {
   return (
@@ -15,7 +17,14 @@ function navbar() {
           </a>
         </div>
         <div className="navbar-end">
-          <div className="avatar avatar-ring avatar-md">
+          <div className="avatar avatar-ring avatar-md mx-1">
+            <NotificationDrawer />
+          </div>
+          <div className="avatar avatar-ring avatar-md mx-1">
+            <MsgDrawer></MsgDrawer>
+          </div>
+
+          <div className="avatar avatar-ring-success avatar-md mx-1">
             <div className="dropdown-container">
               <div className="dropdown">
                 <label
