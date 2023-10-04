@@ -10,6 +10,7 @@ function navbar() {
               src="https://i.ibb.co/PMkQTpZ/logo-no-background.png"
               alt="logo-no-background"
               border="0"
+              className=" w-10 "
             />
           </a>
         </div>

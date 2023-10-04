@@ -24,8 +24,11 @@ function landing() {
             fun conversations, we've got you covered.
           </p>
 
-          <div className=" my-6">
+          <div className="flex my-6">
             <SignInModal />
+            <button className="btn btn-outline-primary mx-1">
+              Create account
+            </button>
           </div>
         </div>
       </div>
