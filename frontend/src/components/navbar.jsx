@@ -5,7 +5,13 @@ function navbar() {
     <div>
       <div className="navbar rounded-lg">
         <div className="navbar-start">
-          <a className="navbar-item">Huzet?</a>
+          <a className="navbar-item">
+            <img
+              src="https://i.ibb.co/PMkQTpZ/logo-no-background.png"
+              alt="logo-no-background"
+              border="0"
+            />
+          </a>
         </div>
         <div className="navbar-end">
           <div className="avatar avatar-ring avatar-md">

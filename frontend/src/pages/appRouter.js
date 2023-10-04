@@ -2,14 +2,16 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Admin from "./admin";
 import Home from "./home";
+import Landing from "./landing";
 
 const AppRouter = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Landing />} />
         {/* <Route path="*" element={<FOF />} /> */}
         <Route path="/admin" element={<Admin />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </Router>
   );
