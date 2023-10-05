@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function navbar() {
   return (
     <div>
-      <div className="navbar rounded-lg ">
+      <div className="navbar rounded-lg">
         <div className="navbar-start">
           <a className="navbar-item">
             <img
