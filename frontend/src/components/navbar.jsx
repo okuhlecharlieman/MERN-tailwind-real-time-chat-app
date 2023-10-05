@@ -38,8 +38,8 @@ function navbar() {
                   />
                 </label>
                 <div className="dropdown-menu dropdown-menu-bottom-left">
-                  <a className="dropdown-item text-sm">Profile</a>
-                  <a tabIndex="-1" className="dropdown-item text-sm">
+                  <a href="/home" className="dropdown-item text-sm">Profile</a>
+                  <a  href="/home" tabIndex="-1" className="dropdown-item text-sm">
                     Account settings
                   </a>
                   <div className="divider"></div>
