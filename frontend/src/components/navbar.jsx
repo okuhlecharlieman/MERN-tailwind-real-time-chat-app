@@ -8,7 +8,7 @@ function navbar() {
     <div>
       <div className="navbar rounded-lg">
         <div className="navbar-start">
-          <a className="navbar-item">
+          <Link to="/home" className="navbar-item">
             <img
               src="https://i.ibb.co/PMkQTpZ/logo-no-background.png"
               alt="logo-no-background"
