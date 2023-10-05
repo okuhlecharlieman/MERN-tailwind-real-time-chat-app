@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function signInModal() {
   return (
     <div>
@@ -70,9 +70,13 @@ function signInModal() {
 
                 <div class="form-field pt-5">
                   <div class="form-control justify-between">
-                    <button type="button" class="btn btn-primary w-full">
+                    <Link
+                      to="/home"
+                      type="button"
+                      class="btn btn-primary w-full"
+                    >
                       Sign in
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import MsgDrawer from "./MsgDrawer";
 import NotificationDrawer from "./notificationDrawer";
+import { Link } from "react-router-dom";
 
 function navbar() {
   return (
@@ -42,9 +43,9 @@ function navbar() {
                     Account settings
                   </a>
                   <div className="divider"></div>
-                  <a tabIndex="-1" className="dropdown-item text-sm">
+                  <Link to="/" tabIndex="-1" className="dropdown-item text-sm">
                     Logout
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import SignInModal from "../components/signInModal";
-import { Link } from "react-router-dom";
+import SignupModal from "../components/signupModal";
 
 function landing() {
   return (
@@ -27,9 +27,7 @@ function landing() {
 
           <div className="flex my-6">
             <SignInModal />
-            <Link to="/Signup" className="btn btn-outline-primary mx-1">
-              Create account
-            </Link>
+            <SignupModal />
           </div>
         </div>
       </div>
