@@ -58,10 +58,10 @@ function signInModal() {
                   <div class="form-control justify-between">
                     <div>
                       <input type="checkbox" class="checkbox" />
-                      <a href="#">Remember me</a>
+                      <a href="/"> Remember me</a>
                     </div>
                     <label class="form-label">
-                      <a class="link link-underline-hover link-primary text-sm">
+                      <a href="/" class="link link-underline-hover link-primary text-sm">
                         Forgot your password?
                       </a>
                     </label>
@@ -152,7 +152,7 @@ function signInModal() {
                 <span>Don't have an account?</span>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  href="/"
                   class="link link-primary text-xs"
                 >
                   Sign up
