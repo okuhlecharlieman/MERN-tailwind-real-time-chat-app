@@ -3,9 +3,9 @@ import React from "react";
 function MsgDrawer() {
   return (
     <div>
-      <input type="checkbox" id="drawer-right" className="drawer-toggle" />
+      <input type="checkbox" id="drawer-right-Msg" className="drawer-toggle" />
 
-      <label htmlFor="drawer-right" className="">
+      <label htmlFor="drawer-right-Msg" className="">
         <img
           width="10px"
           height="10px"
@@ -13,11 +13,11 @@ function MsgDrawer() {
           alt="chat-message"
         />
       </label>
-      <label className="overlay" htmlFor="drawer-right"></label>
+      <label className="overlay" htmlFor="drawer-right-Msg"></label>
       <div className="drawer drawer-right">
         <div className="drawer-content pt-10 flex flex-col h-full">
           <label
-            htmlFor="drawer-right"
+            htmlFor="drawer-right-Msg"
             className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
           >
             ✕
@@ -27,8 +27,7 @@ function MsgDrawer() {
             <input className="input py-1.5 my-3" placeholder="Type here..." />
           </div>
           <div className="h-full flex flex-row justify-end items-end gap-2">
-            <button className="btn btn-ghost">Cancel</button>
-            <button className="btn btn-primary">Create</button>
+            <button className="btn btn-ghost">...</button>
           </div>
         </div>
       </div>
