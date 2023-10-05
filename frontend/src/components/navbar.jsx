@@ -15,7 +15,7 @@ function navbar() {
               border="0"
               className=" w-10 "
             />
-          </a>
+          </Link>
         </div>
         <div className="navbar-end">
           <div className="avatar avatar-ring avatar-md mx-1">
